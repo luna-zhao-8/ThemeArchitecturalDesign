@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="en" class="kl-theme-light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-
+    <link rel="stylesheet" href="/build/stencil-theme-demo.css" />
     <script type="module" src="/build/stencil-theme-demo.esm.js"></script>
     <script nomodule src="/build/stencil-theme-demo.js"></script>
+    <style>
+      html {
+        background: var(--kl-background-color);
+      }
+    </style>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <div>
+      <my-component class="label" circle="true" ghost="true">
+        +
+      </my-component>
+      <my-component class="label" variant="warn" ghost="true" id="btn">
+        Dark mode
+      </my-component>
+    </div>
+
+  <kl-nearby-toothbrush></kl-nearby-toothbrush>
   </body>
+  <script>
+    const btn = document.getElementById('btn');
+    btn.onclick = () => {
+      console.log('3333')
+      document.documentElement.setAttribute('class', 'kl-theme-dark')
+    }
+  </script>
 </html>

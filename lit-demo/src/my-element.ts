@@ -23,6 +23,10 @@ export class MyElement extends LitElement {
       padding: 16px;
       max-width: 800px;
     }
+    .card {
+      background: var(--kl-color-white);
+      box-shadow: 0 0 0 5px;
+    }
   `;
 
   /**
@@ -39,11 +43,13 @@ export class MyElement extends LitElement {
 
   override render() {
     return html`
-      <h1>${this.sayHello(this.name)}!</h1>
-      <button @click=${this._onClick} part="button">
-        Click Count: ${this.count}
-      </button>
-      <slot></slot>
+      <div class="card">
+        <h1 class="title">${this.sayHello(this.name)}!</h1>
+        <button @click=${this._onClick} part="button">
+            Click Count: ${this.count} 
+        </button>
+        <slot></slot>
+      </div>
     `;
   }
 

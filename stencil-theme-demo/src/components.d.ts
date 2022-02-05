@@ -6,22 +6,46 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface KlNearbyToothbrush {
+    }
+    interface KlPanel {
+    }
     interface MyComponent {
         /**
-          * The first name
+          * Render a circle button
          */
-        "first": string;
+        "circle": boolean;
         /**
-          * The last name
+          * Disables the button
          */
-        "last": string;
+        "disabled": boolean;
         /**
-          * The middle name
+          * Render a ghost button
          */
-        "middle": string;
+        "ghost": boolean;
+        /**
+          * The button's size
+         */
+        "size": 'small' | 'medium' | 'large';
+        /**
+          * The button's variant
+         */
+        "variant": 'primary' | 'neutral' | 'success' | 'warn' | 'text';
     }
 }
 declare global {
+    interface HTMLKlNearbyToothbrushElement extends Components.KlNearbyToothbrush, HTMLStencilElement {
+    }
+    var HTMLKlNearbyToothbrushElement: {
+        prototype: HTMLKlNearbyToothbrushElement;
+        new (): HTMLKlNearbyToothbrushElement;
+    };
+    interface HTMLKlPanelElement extends Components.KlPanel, HTMLStencilElement {
+    }
+    var HTMLKlPanelElement: {
+        prototype: HTMLKlPanelElement;
+        new (): HTMLKlPanelElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,25 +53,41 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "kl-nearby-toothbrush": HTMLKlNearbyToothbrushElement;
+        "kl-panel": HTMLKlPanelElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface KlNearbyToothbrush {
+    }
+    interface KlPanel {
+    }
     interface MyComponent {
         /**
-          * The first name
+          * Render a circle button
          */
-        "first"?: string;
+        "circle"?: boolean;
         /**
-          * The last name
+          * Disables the button
          */
-        "last"?: string;
+        "disabled"?: boolean;
         /**
-          * The middle name
+          * Render a ghost button
          */
-        "middle"?: string;
+        "ghost"?: boolean;
+        /**
+          * The button's size
+         */
+        "size"?: 'small' | 'medium' | 'large';
+        /**
+          * The button's variant
+         */
+        "variant"?: 'primary' | 'neutral' | 'success' | 'warn' | 'text';
     }
     interface IntrinsicElements {
+        "kl-nearby-toothbrush": KlNearbyToothbrush;
+        "kl-panel": KlPanel;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +95,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "kl-nearby-toothbrush": LocalJSX.KlNearbyToothbrush & JSXBase.HTMLAttributes<HTMLKlNearbyToothbrushElement>;
+            "kl-panel": LocalJSX.KlPanel & JSXBase.HTMLAttributes<HTMLKlPanelElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

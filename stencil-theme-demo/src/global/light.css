@@ -1,0 +1,181 @@
+:host,
+.kl-theme-light {
+  /* Gray */
+  --kl-color-gray-150: rgb(30, 30, 30);
+  --kl-color-gray-140: rgb(45, 45, 45);
+  --kl-color-gray-110: rgb(74, 74, 74);
+  --kl-color-gray: rgb(82, 82, 82);
+  --kl-color-gray-70: rgb(129, 130, 130);
+  --kl-color-gray-40: rgb(165, 165, 165);
+  --kl-color-gray-30: rgb(200, 200, 200);
+  --kl-color-gray-15: rgb(229, 229, 229);
+  --kl-color-gray-7: rgb(244, 245, 246);
+
+  /* Red */
+  --kl-color-red-110: rgb(185, 0, 0);
+  --kl-color-red: rgb(210, 1, 13);
+  --kl-color-red-70: rgb(223, 77, 86);
+  --kl-color-red-40: rgb(237, 153, 158);
+  --kl-color-red-15: rgb(248, 217, 219);
+  --kl-color-red-5: rgb(253, 242, 243);
+
+  /* Ruby */
+  --kl-color-ruby-110: rgb(129, 28, 26);
+  --kl-color-ruby: rgb(143, 31, 29);
+  --kl-color-ruby-70: rgb(177, 98, 97);
+  --kl-color-ruby-40: rgb(210, 165, 165);
+  --kl-color-ruby-15: rgb(238, 221, 221);
+  /* Teal */
+  --kl-color-teal: rgb(0, 156, 166);
+  --kl-color-teal-70: rgb(76, 186, 193);
+  --kl-color-teal-40: rgb(153, 215, 219);
+  --kl-color-teal-15: rgb(217, 240, 242);
+
+  /* Orange */
+  --kl-color-orange: rgb(255, 105, 5);
+  --kl-color-orange-70: rgb(255, 150, 80);
+  --kl-color-orange-40: rgb(255, 195, 155);
+  --kl-color-orange-15: rgb(255, 232, 217);
+
+  /*
+ * Border radius
+ */
+  --kl-border-radius-small: 0.5rem; /* 8px */
+  --kl-border-radius-medium: 0.75rem; /* 12px */
+  --kl-border-radius-large: 1rem; /* 16px */
+  --kl-border-radius-x-large: 1.5rem; /* 24px */
+
+
+
+
+  /*
+   * Design Tokens
+   *
+   * Design tokens represent the colors, text styles
+   * and spacing tokens in your styleguide. Using these tokens,
+   * you can propagate changes in your design system to your development environment.
+   *
+   */
+
+  /* Primary */
+  --kl-color-primary-110: var(--kl-color-red-110);
+  --kl-color-primary: var(--kl-color-red);
+  --kl-color-primary-70: var(--kl-color-red-70);
+  --kl-color-primary-40: var(--kl-color-red-40);
+  --kl-color-primary-15: var(--kl-color-red-15);
+  --kl-color-primary-5: var(--kl-color-red-5);
+
+  /* Success */
+  --kl-color-success: var(--kl-color-teal);
+  --kl-color-success-70: var(--kl-color-teal-70);
+  --kl-color-success-40: var(--kl-color-teal-40);
+  --kl-color-success-15: var(--kl-color-teal-15);
+
+  /* Warn */
+  --kl-color-warn: var(--kl-color-orange);
+  --kl-color-warn-70: var(--kl-color-orange-70);
+  --kl-color-warn-40: var(--kl-color-orange-40);
+  --kl-color-warn-15: var(--kl-color-orange-15);
+
+  /* Neutral */
+  --kl-color-neutral-150: var(--kl-color-gray-150);
+  --kl-color-neutral-140: var(--kl-color-gray-140);
+  --kl-color-neutral-110: var(--kl-color-gray-110);
+  --kl-color-neutral: var(--kl-color-gray);
+  --kl-color-neutral-70: var(--kl-color-gray-70);
+  --kl-color-neutral-40: var(--kl-color-gray-40);
+  --kl-color-neutral-30: var(--kl-color-gray-30);
+  --kl-color-neutral-15: var(--kl-color-gray-15);
+  --kl-color-neutral-7: var(--kl-color-gray-7);
+
+  /* Neutral one-offs */
+  --kl-color-neutral-0: rgb(255, 255, 255);
+  --kl-color-neutral-100: rgb(0, 0, 0);
+
+  --kl-background-color: var(--kl-color-gray-7);
+  --kl-text-color-gray: var(--kl-color-gray);
+
+
+
+  /*
+   * Elevations
+   */
+  --kl-shadow-1: 0 2px 6px 0 var(--kl-color-gray-30) 0.5;
+
+  /*
+   * Spacings
+   */
+  --kl-spacing-3x-small: 0.125rem; /* 2px */
+  --kl-spacing-2x-small: 0.25rem; /* 4px */
+  --kl-spacing-x-semi-small: 0.375rem; /* 6px */
+  --kl-spacing-x-small: 0.5rem; /* 8px */
+  --kl-spacing-semi-small: 0.625rem; /* 10px */
+  --kl-spacing-small: 0.75rem; /* 12px */
+  --kl-spacing-medium: 1rem; /* 16px */
+  --kl-spacing-large: 1.25rem; /* 20px */
+  --kl-spacing-semi-large: 1.5rem; /* 24px */
+  --kl-spacing-x-large: 1.75rem; /* 28px */
+  --kl-spacing-2x-large: 2.25rem; /* 36px */
+  --kl-spacing-3x-large: 3rem; /* 48px */
+  --kl-spacing-4x-large: 4.5rem; /* 72px */
+  /*
+   * Transitions
+   */
+
+  /* Fonts */
+  --kl-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --kl-font-serif: Georgia, 'Times New Roman', serif;
+
+  /* Font size base on 16px */
+  --kl-font-size-4x-large: 4.5rem; /* 72px */
+  --kl-font-size-3x-large: 3rem; /* 48px */
+  --kl-font-size-2x-large: 2.25rem; /* 36px */
+  --kl-font-size-x-large: 1.5rem; /* 24px */
+  --kl-font-size-large: 1.25rem; /* 20px */
+  --kl-font-size-medium: 1rem;  /* 16px */
+  --kl-font-size-small: 0.875rem; /* 14px */
+  --kl-font-size-x-small: 0.75rem; /* 12px */
+  --kl-font-size-minor: 0.625rem; /* 10px */
+
+  /* Font weights */
+  --kl-font-weight-light: 300;
+  --kl-font-weight-normal: 400;
+  --kl-font-weight-semibold: 500;
+  --kl-font-weight-bold: 700;
+
+  /* Letter spacings */
+
+  /* Letter heights */
+
+  /* Buttons */
+  --kl-button-font-size-minor: var(--kl-font-size-x-small);
+  --kl-button-font-size-small: var(--kl-font-size-small);
+  --kl-button-font-size-medium: var(--kl-font-size-medium);
+  --kl-button-font-size-large: var(--kl-font-size-large);
+
+  /** Inputs */
+  --kl-input-height-small: 2rem; /* 32px */
+  --kl-input-height-medium: 2.5rem; /* 40px */
+  --kl-input-height-large: 3.125rem; /* 50px */
+
+  --kl-input-border-width: 1px;
+
+  --kl-input-border-radius-small: var(--kl-border-radius-small);
+  --kl-input-border-radius-medium: var(--kl-border-radius-medium);
+  --kl-input-border-radius-large: var(--kl-border-radius-large);
+  --kl-input-border-radius-x-large: var(--kl-border-radius-x-large);
+
+
+  /* Labels */
+  /* Overlays */
+  /* Panels */
+  --kl-panel-background-color: var(--kl-color-neutral-0);
+  --kl-panel-border-color: var(--kl-color-gray);
+  --kl-panel-border-width: 1px;
+
+  /* Tooltips */
+  /* Help text */
+
+
+}

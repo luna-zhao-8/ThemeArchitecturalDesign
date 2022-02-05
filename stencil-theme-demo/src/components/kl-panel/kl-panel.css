@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  /*width: auto;*/
+  --padding: var(--kl-spacing-semi-large);
+}
+
+.panel {
+  padding: var(--padding);
+  border-radius: var(--kl-input-border-radius-small);
+  background: var(--kl-panel-background-color);
+  box-shadow: var(--kl-shadow-1);
+}

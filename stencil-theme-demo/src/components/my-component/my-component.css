@@ -1,3 +1,206 @@
 :host {
-  display: block;
+  display: inline-block;
+  box-sizing: border-box;
+  width: auto;
+}
+
+.button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
+  vertical-align: top;
+  width: 100%;
+  border-width: var(--kl-input-border-width);
+  white-space: nowrap;
+  border-radius: var(--kl-input-border-radius-x-large);
+}
+
+.button--disabled {
+  opacity: 0.5;
+}
+
+.button__prefix,
+.button__suffix {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/*
+ * Standard buttons
+ */
+
+/** primary */
+.button--standard.button--primary {
+  background: var(--kl-color-primary);
+  color: var(--kl-color-neutral-0);
+}
+
+/** success */
+.button--standard.button--success {
+  background: var(--kl-color-success);
+  color: var(--kl-color-neutral-0);
+}
+
+/** warn */
+.button--standard.button--warn {
+  background: var(--kl-color-warn);
+  color: var(--kl-color-neutral-0);
+}
+
+/** neutral */
+.button--standard.button--neutral {
+  background: var(--kl-color-neutral-30);
+  color: var(--kl-color-neutral);
+}
+
+/*
+ * Ghost buttons
+ */
+.button--ghost {
+  background: none;
+  border: solid var(--kl-input-border-width);
+}
+
+/** primary */
+.button--ghost.button--primary {
+  border-color: var(--kl-color-primary);
+  color: var(--kl-color-primary);
+}
+
+/** success */
+.button--ghost.button--success {
+  border-color: var(--kl-color-success);
+  color: var(--kl-color-success);
+}
+
+/** warn */
+.button--ghost.button--warn {
+  border-color: var(--kl-color-warn);
+  color: var(--kl-color-warn);
+}
+
+/** neutral */
+.button--ghost.button--neutral {
+  border-color: var(--kl-color-neutral);
+  color: var(--kl-color-neutral);
+}
+/*
+ * Text buttons
+ */
+.button--text {
+  background: transparent;
+  border-color: transparent;
+  color: var(--kl-color-primary);
+}
+
+
+/*
+ * Button size
+ */
+.button--small {
+  font-size: var(--kl-font-size-small);
+  height: var(--kl-input-height-small);
+  line-height: calc(var(--kl-input-height-small) - var(--kl-input-border-width) * 2);
+}
+
+.button--medium {
+  font-size: var(--kl-font-size-small);
+  height: var(--kl-input-height-medium);
+  line-height: calc(var(--kl-input-height-medium) - var(--kl-input-border-width) * 2);
+}
+.button--large {
+  font-size: var(--kl-font-size-medium);
+  height: var(--kl-input-height-large);
+  line-height: calc(var(--kl-input-height-large) - var(--kl-input-border-width) * 2);
+}
+
+/*
+ * Circle button
+ */
+.button--circle {
+  padding-left: 0;
+  padding-right: 0;
+}
+.button--circle.button--small {
+  width: var(--kl-input-height-small);
+  border-radius: 50%;
+}
+.button--circle.button--medium {
+  width: var(--kl-input-height-medium);
+  border-radius: 50%;
+}
+.button--circle.button--large {
+  width: var(--kl-input-height-large);
+  border-radius: 50%;
+}
+
+.button--circle .button__prefix,
+.button--circle .button__suffix {
+  display: none;
+}
+
+/*
+ * Button spacing
+ */
+
+.button--small .button__label {
+  padding: 0 var(--kl-spacing-small);
+}
+
+.button--medium .button__label {
+  padding: 0 var(--kl-spacing-medium);
+}
+
+.button--large .button__label {
+  padding: 0 var(--kl-spacing-large);
+}
+
+:host(.prefix) .button--small {
+  padding-left: var(--kl-spacing-x-semi-small);
+}
+
+:host(.prefix) .button--small .button__label {
+  padding-left: var(--kl-spacing-x-small);
+}
+
+:host(.prefix) .button--medium {
+  padding-left: var(--kl-spacing-small);
+}
+
+:host(.prefix) .button--medium .button__label {
+  padding-left: var(--kl-spacing-semi-small);
+}
+
+:host(.prefix) .button--large {
+  padding-left: var(--kl-spacing-small);
+}
+
+:host(.prefix) .button--large .button__label {
+  padding-left: var(--kl-spacing-small);
+}
+
+:host(.suffix) .button--small {
+  padding-right: var(--kl-spacing-x-small);
+}
+
+:host(.suffix) .button--small .button__label {
+  padding-right: var(--kl-spacing-x-small);
+}
+
+:host(.suffix) .button--medium {
+  padding-right: var(--kl-spacing-small);
+}
+
+:host(.suffix) .button--medium .button__label {
+  padding-right: var(--kl-spacing-small);
+}
+
+:host(.suffix) .button--large {
+  padding-right: var(--kl-spacing-small);
+}
+
+.button--has-suffix.button--large .button__label {
+  padding-right: var(--kl-spacing-small);
 }

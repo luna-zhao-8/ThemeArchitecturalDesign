@@ -7,11 +7,31 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `first`  | `first`   | The first name  | `string` | `undefined` |
-| `last`   | `last`    | The last name   | `string` | `undefined` |
-| `middle` | `middle`  | The middle name | `string` | `undefined` |
+| Property   | Attribute  | Description            | Type                                                      | Default     |
+| ---------- | ---------- | ---------------------- | --------------------------------------------------------- | ----------- |
+| `circle`   | `circle`   | Render a circle button | `boolean`                                                 | `false`     |
+| `disabled` | `disabled` | Disables the button    | `boolean`                                                 | `false`     |
+| `ghost`    | `ghost`    | Render a ghost button  | `boolean`                                                 | `false`     |
+| `size`     | `size`     | The button's size      | `"large" \| "medium" \| "small"`                          | `'medium'`  |
+| `variant`  | `variant`  | The button's variant   | `"neutral" \| "primary" \| "success" \| "text" \| "warn"` | `'primary'` |
+
+
+## Slots
+
+| Slot       | Description                                                        |
+| ---------- | ------------------------------------------------------------------ |
+|            | The button's label.                                                |
+|            | prefix - Used to prepend an icon or similar element to the button. |
+| `"suffix"` | Used to append an icon or similar element to the button.           |
+
+
+## Shadow Parts
+
+| Part       | Description |
+| ---------- | ----------- |
+| `"base"`   |             |
+| `"label"`  |             |
+| `"prefix"` |             |
 
 
 ----------------------------------------------

@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  margin-top: 20px;
+}
+.container > .toothbrush--card{
+  margin-bottom: var(--kl-spacing-x-small);
+}
+.toothbrush--card {
+  width: 100%;
+
+  color: var(--kl-text-color-gray);
+}
+.toothbrush--card > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+my-component::part(label) {
+  font-size: var(--kl-font-size-minor);
+  padding: 0 var(--kl-spacing-semi-large);
+}
+my-component::part(base) {
+  height: 24px;
+  line-height: 24px;
+}

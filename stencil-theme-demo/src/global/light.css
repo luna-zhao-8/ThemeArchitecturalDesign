@@ -100,7 +100,7 @@
   /*
    * Elevations
    */
-  --kl-shadow-1: 0 2px 6px 0 var(--kl-color-gray-30) 0.5;
+  --kl-shadow-1: 0 2px 6px 0 rgba(var(--kl-color-gray-30), 0.5);
 
   /*
    * Spacings
